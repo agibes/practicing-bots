@@ -14,6 +14,8 @@ The individual command files were written (with API integration) and the command
 
 The command deployment script was written to register slash commands with Discord so they appear in the interface
 
+the messageCreate event listener was implemented to moderate bad words in chat using the bad-words package
+
 Notes:
 
 node's fs modules (file system module) is used to read the commands directoy and identify command files
