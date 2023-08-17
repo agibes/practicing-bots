@@ -10,14 +10,14 @@ A token was generated in the discord developer portal, scope was assigned to bot
 
 Event listeners were created for when the client is ready and for when an interaciton is received
 
-The individual command files and the command handler were created (dynamically read the files and execute the commands)
+The individual command files were written (with API integration) and the command handler was created (to dynamically read the files and execute the commands)
 
 The command deployment script was written to register slash commands with Discord so they appear in the interface
-
-*More functionality coming soon
 
 Notes:
 
 node's fs modules (file system module) is used to read the commands directoy and identify command files
 node's path module (path utility module) constructs paths to access files and directories
 the Collection class is used to store and retrieve commands for execution
+
+API for factoid.js: https://api-ninjas.com/api/facts
