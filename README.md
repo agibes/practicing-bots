@@ -16,7 +16,7 @@ The command deployment script was written to register slash commands with Discor
 
 the messageCreate event listener was implemented to moderate bad words in chat using the bad-words package
 
-the kick (member) and addRole (Mod) slash commands were implemented for users with adequate permissions
+the kick and addrole slash commands were implemented for users with adequate permissions
 
 Notes:
 
