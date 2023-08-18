@@ -18,7 +18,7 @@ module.exports = {
             interaction.editReply('You must select a user to kick');
             return;
             };
-        await interaction.reply('Kicking user' + target.username);
+        await interaction.editReply('Kicking user' + target.username);
         await interaction.guild.members.kick(target);
     },
 };

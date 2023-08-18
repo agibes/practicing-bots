@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const commands = [];
-// Grab all the command files from the commands directory created earlier
+// Grab all the command folders from the commands directory created earlier
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
 
@@ -33,7 +33,7 @@ const rest = new REST().setToken(process.env.TOKEN);
 
 		// The put method is used to fully refresh all commands in the guild with the current set
 		const data = await rest.put(
-			Routes.applicationGuildCommands(process.env.clientId),
+			Routes.applicationGuildCommands(process.env.clientId, process.env.guildId),
 			{ body: commands },
 		);
 

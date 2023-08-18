@@ -3,12 +3,12 @@ require('dotenv').config();
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('addRole')
-        .setDescription('Adds a role to a target user (Mod in this case)')
+        .setName('makemod')
+        .setDescription('Give a member role: Mod')
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageRoles)
         .addUserOption(option=> 
             option.setName('target')
-                .setDescription('The user to give a role to')
+                .setDescription('The member to give a role to')
                 .setRequired(true)
             ),
     async execute(interaction) {
@@ -19,7 +19,10 @@ module.exports = {
             return;
             };
         let role = interaction.guild.roles.cache.find(r => r.name === 'Mod');
-        await interaction.reply('Adding role "' + role.name + '" to user ' + target.username);
-        await target.roles.add(role).catch(console.error);
+        const member = await interaction.guild.members.fetch(target.id);
+        member.roles.add(role);
+        if(member.roles.cache.some(role=>role.name === 'Mod')) {
+            await interaction.editReply('Wow! ' + target.username + ' is now a ' + role.name + '!'); 
+        }
     },
 };
