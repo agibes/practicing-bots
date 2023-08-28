@@ -1,4 +1,4 @@
-The purpose of this project is to practice making discord bots
+Purpose: to make a discord bot
 
 I will be using the discord.js library and following the discord.js Guide and github documentation
 
