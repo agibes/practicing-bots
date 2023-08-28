@@ -2,7 +2,7 @@ The purpose of this project is to practice making discord bots
 
 I will be using the discord.js library and following the discord.js Guide and github documentation
 
-The invite link: https://discord.com/api/oauth2/authorize?client_id=1141111301242888317&permissions=67584&scope=applications.commands%20bot
+The invite link: https://discord.com/api/oauth2/authorize?client_id=1141111301242888317&permissions=2415986690&scope=applications.commands%20bot
 
 Steps:
 
